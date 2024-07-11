@@ -1,15 +1,16 @@
-import "./App.css";
-import "./components/Welcome";
-import Welcome from "./components/Welcome";
-import Boton from "./components/Boton";
+import React, { useState, useEffect } from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  });
+
   return (
-    <div className="App">
-      <p>Inicio</p>
-      <Boton numero="1" className="btn" />
-      <Boton numero="2" />
-      <Boton numero="3" />
+    <div>
+      <p>You clicked {count} times.</p>
+      <button onClick={() => setCount(count + 1)}>Click Me</button>
     </div>
   );
 }
