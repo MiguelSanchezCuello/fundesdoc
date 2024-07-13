@@ -1,16 +1,12 @@
 import React from "react";
 
-const Boton = ({ setValor, valor }) => {
+export default function Boton() {
   return (
     <button
-      onClick={() => {
-        setValor(valor + 2);
-      }}
       type="button"
-      class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+      className="bg-green-700 text-2xl text-white py-2 px-5 mt-5"
     >
-      Mi boton + 2
+      Mi boton
     </button>
   );
-};
-export default Boton;
+}
